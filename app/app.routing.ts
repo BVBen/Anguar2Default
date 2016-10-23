@@ -1,16 +1,14 @@
 import { ModuleWithProviders } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { DashboardComponent } from './Dashboard/dashboard.component';
+import { AppComponent } from './app.component';
 const appRoutes: Routes = [
-  { path: 'dashboard', component: DashboardComponent },
-//   {
-//     path: 'heroes',
-//     component: HeroListComponent,
-//     data: {
-//       title: 'Heroes List'
-//     }
-//   },
-   { path: '', redirectTo:"dashboard", pathMatch:"full"},
+
+  {path: "dashboard", loadChildren:'app/Dashboard/dashboard.module#DashboardModule'},
+
+  { path: "", redirectTo:"dashboard", pathMatch:"full"},
+
+   
 //   { path: '**', component: PageNotFoundComponent }
 ];
 

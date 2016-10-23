@@ -1,12 +1,17 @@
-<div class="container">
 
-<div class="row">
-<h1 class="db-title col-md-12">Meine Turniere</h1>
-</div>
+   <div id="container" class="container">
+     <div class="row"> 
+         <div class="col-md-3">
+    <button [routerLink]="['./tournament']" class="btn-default btn" style="height:200px; width:200px; display:flex; align-items:center; justify-align:center;">
+          <h3 style="height:100%; width:100%">Demo Turnier</h3>    
+    </button>   
+    </div>
 
-<div class="row">
-    <div class="col-md-4">
-        <div id="new_tournament" class="sa-dashboard-item">Neues Turnier</div>
-        </div>
-</div>
-</div>
+<div class="col-md-3">
+    <button class="btn-default btn" style="height:200px; width:200px; display:flex; align-items:center; justify-align:center;" disabled="true">
+          <h3>Neues Turnier</h3>    
+    </button>
+    </div>
+    <!--<router-outlet></router-outlet>-->
+    </div>
+

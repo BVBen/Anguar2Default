@@ -1,3 +1,5 @@
+import { ITeam } from "./team.d";
+
 export interface IMatch {
     homeTeam: ITeam;
     awayTeam: ITeam;

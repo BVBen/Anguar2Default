@@ -7,6 +7,6 @@ export interface ITournament {
     name: string;
     image: string;
     matches: IMatch[];
-    options: ITournamentOptions;
+    tournamentOptions: ITournamentOptions;
     teams: ITeam[];
 }

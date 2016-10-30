@@ -1,0 +1,240 @@
+{
+  "tournament": {
+    "id": 5,
+    "name": "test",
+    "image": "Base64String",
+    "matches": [
+      {
+        "homeTeam": {
+          "id": 1,
+          "name": "Borussia Dortmund",
+          "spieler": [
+            {
+              "name": "Benjamin",
+              "password": "test",
+              "tournamentIds": [
+                5,
+                2,
+                4
+              ]
+            }
+          ],
+          "image": "Base64String"
+        },
+        "awayTeam": {
+          "id": 2,
+          "name": "Bayern München",
+          "spieler": [
+            {
+              "name": "Hans Peter",
+              "password": "test",
+              "tournamentIds": [
+                5,
+                3,
+                1
+              ]
+            }
+          ],
+          "image": "Base64String"
+        },
+        "homeTeamScore": 2,
+        "awayTeamScore": 1,
+        "isMatchOver": true,
+        "isResultConfirmed": true,
+        "matchDay": 1,
+        "matchType": "liga"
+      },
+      {
+        "homeTeam": {
+          "id": 3,
+          "name": "Schalke 04",
+          "spieler": [
+            {
+              "name": "Gustav Gans",
+              "password": "test",
+              "tournamentIds": [
+                5,
+                2,
+                4
+              ]
+            }
+          ],
+          "image": "Base64String"
+        },
+        "awayTeam": {
+          "id": 4,
+          "name": "Bayer Leverkusen",
+          "spieler": [
+            {
+              "name": "Oli Garch",
+              "password": "test",
+              "tournamentIds": [
+                5,
+                2,
+                4
+              ]
+            }
+          ],
+          "image": "Base64String"
+        },
+        "homeTeamScore": 1,
+        "awayTeamScore": 4,
+        "isMatchOver": true,
+        "isResultConfirmed": true,
+        "matchDay": 1,
+        "matchType": "liga"
+      },
+      {
+        "homeTeam": {
+          "id": 2,
+          "name": "Bayern München",
+          "spieler": [
+            {
+              "name": "Hans Peter",
+              "password": "test",
+              "tournamentIds": [
+                5,
+                3,
+                1
+              ]
+            }
+          ],
+          "image": "Base64String"
+        },
+        "awayTeam": {
+          "id": 3,
+          "name": "Schalke 04",
+          "spieler": [
+            {
+              "name": "Gustav Gans",
+              "password": "test",
+              "tournamentIds": [
+                5,
+                2,
+                4
+              ]
+            }
+          ],
+          "image": "Base64String"
+        },
+        "homeTeamScore": null,
+        "awayTeamScore": null,
+        "isMatchOver": false,
+        "isResultConfirmed": false,
+        "matchDay": 2,
+        "matchType": "liga"
+      },
+      {
+        "homeTeam": {
+          "id": 4,
+          "name": "Bayer Leverkusen",
+          "spieler": [
+            {
+              "name": "Oli Garch",
+              "password": "test",
+              "tournamentIds": [
+                5,
+                2,
+                4
+              ]
+            }
+          ],
+          "image": "Base64String"
+        },
+        "awayTeam": {
+          "id": 1,
+          "name": "Borussia Dortmund",
+          "spieler": [
+            {
+              "name": "Benjamin",
+              "password": "test",
+              "tournamentIds": [
+                5,
+                2,
+                4
+              ]
+            }
+          ],
+          "image": "Base64String"
+        },
+        "homeTeamScore": null,
+        "awayTeamScore": null,
+        "isMatchOver": false,
+        "isResultConfirmed": false,
+        "matchDay": 2,
+        "matchType": "liga"
+      }
+    ],
+    "options": {
+      "modus": "liga",
+      "gamesAgainstOpponent": 2,
+      "confirmResult": false
+    },
+    "teams": [
+      {
+        "id": 1,
+        "name": "Borussia Dortmund",
+        "spieler": [
+          {
+            "name": "Benjamin",
+            "password": "test",
+            "tournamentIds": [
+              5,
+              2,
+              4
+            ]
+          }
+        ],
+        "image": "Base64String"
+      },
+      {
+        "id": 2,
+        "name": "Bayern München",
+        "spieler": [
+          {
+            "name": "Hans Peter",
+            "password": "test",
+            "tournamentIds": [
+              5,
+              3,
+              1
+            ]
+          }
+        ],
+        "image": "Base64String"
+      },
+      {
+        "id": 3,
+        "name": "Schalke 04",
+        "spieler": [
+          {
+            "name": "Gustav Gans",
+            "password": "test",
+            "tournamentIds": [
+              5,
+              2,
+              4
+            ]
+          }
+        ],
+        "image": "Base64String"
+      },
+      {
+        "id": 4,
+        "name": "Bayer Leverkusen",
+        "spieler": [
+          {
+            "name": "Oli Garch",
+            "password": "test",
+            "tournamentIds": [
+              5,
+              2,
+              4
+            ]
+          }
+        ],
+        "image": "Base64String"
+      }      
+    ]
+  }
+}

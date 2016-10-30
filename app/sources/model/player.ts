@@ -1,4 +1,4 @@
-import { IPlayer } from "./typings/player";
+import { IPlayer } from "./typings/player.d";
 
 export class Player implements IPlayer {
     id: string;

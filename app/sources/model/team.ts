@@ -1,5 +1,5 @@
-import { ITeam } from "./typings/team.d";
-import { IPlayer } from "./typings/player.d";
+import { ITeam } from "./typings/ITeam.d";
+import { IPlayer } from "./typings/IPlayer.d";
 
 export class Team implements ITeam {
     id: number;

@@ -1,7 +1,8 @@
-import { IMatch } from "./typings/match.d";
-import { ITeam } from "./typings/team.d";
+import { IMatch } from "./typings/IMatch.d";
+import { ITeam } from "./typings/ITeam.d";
 
 export class Match implements IMatch {
+    id: number;
     homeTeam: ITeam;
     awayTeam: ITeam;
     homeTeamScore?: number;

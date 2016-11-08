@@ -1,8 +1,8 @@
-import { ITournament } from "./typings/tournament.d";
-import { IPlayer } from "./typings/player.d";
-import { IMatch } from "./typings/match.d";
-import { ITournamentOptions } from "./typings/tournamentOptions.d";
-import { ITeam } from "./typings/team.d";
+import { ITournament } from "./typings/ITournament.d";
+import { IPlayer } from "./typings/IPlayer.d";
+import { IMatch } from "./typings/IMatch.d";
+import { ITournamentOptions } from "./typings/ITournamentOptions.d";
+import { ITeam } from "./typings/ITeam.d";
 
 export class Tournament implements ITournament {
     id: number;

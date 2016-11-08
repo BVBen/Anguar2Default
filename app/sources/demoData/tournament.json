@@ -5,6 +5,7 @@
     "image": "Base64String",
     "matches": [
       {
+        "id": 1,
         "homeTeam": {
           "id": 1,
           "name": "Borussia Dortmund",
@@ -45,6 +46,7 @@
         "matchType": "liga"
       },
       {
+        "id": 2,
         "homeTeam": {
           "id": 3,
           "name": "Schalke 04",
@@ -85,6 +87,7 @@
         "matchType": "liga"
       },
       {
+        "id": 3,
         "homeTeam": {
           "id": 2,
           "name": "Bayern München",
@@ -125,6 +128,7 @@
         "matchType": "liga"
       },
       {
+        "id": 4,
         "homeTeam": {
           "id": 4,
           "name": "Bayer Leverkusen",

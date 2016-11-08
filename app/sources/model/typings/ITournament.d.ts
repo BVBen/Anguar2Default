@@ -1,6 +1,6 @@
-import { IMatch } from "./match.d";
-import { ITournamentOptions } from "./tournamentOptions.d";
-import { ITeam } from "./team.d";
+import { IMatch } from "./IMatch.d";
+import { ITournamentOptions } from "./ITournamentOptions.d";
+import { ITeam } from "./ITeam.d";
 
 export interface ITournament {
     id: number;

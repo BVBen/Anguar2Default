@@ -1,0 +1,7 @@
+<div>
+    <div>
+        <span id="homeTeamName">{{match?.homeTeam?.name}}</span> : <span id="awayTeamName">{{match?.awayTeam?.name}}</span> 
+        <input type="number" value="{{match?.homeTeamScore}}"/> <span> : </span><input type="number" value="{{match?.awayTeamScore}}"/>
+    </div>
+    <button (click)="saveResult()">Spiel Abschließen</button>
+</div>

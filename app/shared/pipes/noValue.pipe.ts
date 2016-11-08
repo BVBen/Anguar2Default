@@ -5,6 +5,9 @@ export class NoValuePipe implements PipeTransform {
         if (value || value === 0) {
             return value;
         } else {
+            if(args) {
+                return args[0];
+            }
             return "-";
         }
     }

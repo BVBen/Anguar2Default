@@ -1,6 +1,7 @@
-import { ITeam } from "./team.d";
+import { ITeam } from "./ITeam.d";
 
 export interface IMatch {
+    id: number;
     homeTeam: ITeam;
     awayTeam: ITeam;
     homeTeamScore?: number;

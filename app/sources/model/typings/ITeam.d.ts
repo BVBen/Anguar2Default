@@ -1,4 +1,4 @@
-import { IPlayer } from "./player.d";
+import { IPlayer } from "./IPlayer.d";
 
 export interface ITeam {
     id: number;

@@ -27,7 +27,7 @@
         Spiele
     </h2>
     <template ngFor let-match [ngForOf]="matches" let-index="index">
-        <div class="row">
+        <div class="row" [routerLink]="['./match/', match.id]">
             <span>{{match.homeTeam?.name}}</span>
             <span> : </span>
             <span>{{match.awayTeam?.name}}</span>
@@ -38,39 +38,8 @@
     </template>
 </div>
 
-<div class="row">
-    <h2 class="col-md-12">
-        Tabelle
-    </h2>
-</div>
-<div class="row">
-    <div class="col-md-6">
-        <div class="table-responsive">
-            <table class="table">
-                <thead>
-                    <tr>
-                        <th>Platz</th>
-                        <th style="text-align: left; padding-left: 5px;">Mannschaft</th>
-                        <th style="text-align: center;">Spiele</th>
-                        <th style="text-align: center;">Tore</th>
-                        <th style="text-align: center;">Diff.</th>
-                        <th style="text-align: center;">Punkte</th>
-                        </tr>
-                </thead>
-                <tbody>
-                    <template ngFor let-team [ngForOf]="teams" let-index="index">
-                        <tr>
-                            <td>{{index+1}}</td>
-                            <td style="padding-left: 5px;">{{team.name}}</td>
-                            <td style="text-align: center;">2</td>
-                            <td style="text-align: center;">7:2</td>
-                            <td style="text-align: center;">5</td>
-                            <td style="text-align: center;">6</td>
-                        </tr>
-                    </template>
-                </tbody>
-            </table>
-        </div>
-    </div>
-</div>
+<!--Tabelle-->
+
+<tournament-table [teamsObs]="teamsObs"></tournament-table>
+
 </div>

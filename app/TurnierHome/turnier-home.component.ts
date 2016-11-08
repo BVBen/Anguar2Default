@@ -1,10 +1,10 @@
 import {Component, OnInit} from "@angular/core";
-import {Observable, Subject} from 'rxjs/Rx';
-// import { TournamentService } from "./tournament.service";
+import {Observable, Subject, BehaviorSubject} from 'rxjs/Rx';
+
 import { Team } from "../sources/model/team";
 import { Match } from "../sources/model/match";
 import { Tournament } from "../sources/model/tournament";
-import {TournamentService } from "../shared/services/tournament.service";
+import { TournamentService } from "../shared/services/tournament.service";
 
 @Component({
     selector: 'turnier-home',
@@ -14,7 +14,8 @@ import {TournamentService } from "../shared/services/tournament.service";
 })
 export class TurnierHomeComponent implements OnInit{ 
 
-   teams: Array<Team>;
+    teams: Array<Team>;
+    teamsObs: BehaviorSubject<Array<Team>> = new BehaviorSubject<Array<Team>>(null);
     turnier: Tournament;
     matches: Array<Match>;
     nextMatch: Match;
@@ -27,22 +28,13 @@ export class TurnierHomeComponent implements OnInit{
             var turnier = data.tournament;
             // TODO: Load Tournamentoptions eventuell überflüssig da in turnier enthalten
             this.teams = turnier.teams;
+            this.teamsObs.next(this.teams);
             this.matches = turnier.matches;
             this.setUpcomingMatch();
             this.calculateMatches();
-            this.refreshTable();
         });
     }
-    refreshTable() {
-        this.teams.sort((a, b) => {
-            if (a.points < b.points) return 1;
-            if (a.points > b.points) return -1;
-            if (a.goalDifference < b.goalDifference) return 1;
-            if (a.goalDifference > b.goalDifference) return -1;
-            if (a.goals < b.goals) return 1;
-            if (a.goals > b.goals) return -1;
-        });
-    }
+
     setUpcomingMatch() {
        this.nextMatch = this.matches.filter(match => { return !match.isMatchOver})[0];
     }
@@ -75,7 +67,14 @@ export class TurnierHomeComponent implements OnInit{
                 }
             }
         };
+
+        this.teamsObs.next(this.teams);
     }
+
+    onMatchClicked(matchId: number){
+        
+    }
+
     private evaluateMatchForTeam(team: Team, goals: number, goalsAgainst: number) {
         team.completedGames++;
         team.goals += goals;

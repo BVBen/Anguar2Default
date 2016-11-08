@@ -3,7 +3,8 @@ import { Injectable } from '@angular/core';
 import {Observable, Subject, BehaviorSubject} from 'rxjs/Rx';
 import { Http, Response } from '@angular/http';
 import {Tournament} from "../../sources/model/tournament";
-import {RootObject} from "../../sources/model/typings/rootObject.d";
+import {RootObject} from "../../sources/model/typings/IRootObject.d";
+import { IMatch } from "../../sources/model/typings/IMatch.d";
 import { Match} from "../../sources/model/match";
 import {Team} from "../../sources/model/team";
 import {TournamentOptions} from "../../sources/model/tournamentOptions";
@@ -25,7 +26,7 @@ export class TournamentService {
 
         this.getTournament(null).subscribe(data => {
             //this.turnier = data.turnier;
-            this.turnier$.next(this.turnier);
+            this.turnier$.next(data.tournament);
         });
     }
 
@@ -67,6 +68,18 @@ export class TournamentService {
 
     getOptions(tournamentId: any): TournamentOptions {
         return this.turnier.tournamentOptions;
+    }
+
+    getMatch(matchId: number): Match{
+        var match = this.turnier.matches.find((match:IMatch) => {
+           return match.id === matchId;
+        });
+
+        return match;
+    }
+
+    saveGameResult(match: Match){
+        console.log("Spiel zu ende, Enstand: " + match.homeTeamScore + " : " + match.awayTeamScore);
     }
 
     createMatchesForTournament(turnier: Tournament): Array<Match> {
